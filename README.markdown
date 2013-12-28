@@ -13,14 +13,24 @@ Read the explanation and watch videos of the car in action at <a href="http://bl
 BUILD / QUICKSTART
 ------------------
 
-To build and install the android app (using your default Android SDK and device):
+To build and install the android app:
 
-    cd android/
-    ant install
+Android Studio 
+    copied gradle 1.8 into plugins folder and changed name to gradle after backing up previous gradle
+
+    import project...
+    select build.gradle
+    selected local gradle location in plugins folder of Android Studio
+    Build -> generate signed apk
+    Create key store
+    Select path for apk
+    /android-studio/sdk/platform-tools/adb -d install path/to/your/app.apk
 
 Flash the Arduino sketch to your arduino by opening the serialrccar sketch in the Arduino IDE and clicking Upload.  Note the USB serial port your Arduino board is connected to (available in Tools -> Serial Port) as you will need to know it later.
 
 Driver depends on the RxTx Serial library and Apache Commons Math library - see the README in Driver/ for more details.  Once the dependencies are provided:
+
+The driver also needs to be able to find junit.
 
 Build the Driver app
 
